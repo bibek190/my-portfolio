@@ -20,7 +20,10 @@ header {
   justify-content: space-between;
   align-items: center;
   color: white;
-  background: transparent;
+  background: rgba(21, 28, 34, 0.8);
+  position: fixed;
+  box-shadow: 0 2px 10px 0.8px blue;
+  z-index: 1;
 }
 header .logo {
   font-size: 3rem;
@@ -57,11 +60,12 @@ header .navlinks {
   height: 90vh;
   display: flex;
   align-items: center;
-  padding: 0 5%;
+  padding: 10% 5% 0 5%;
   gap: 4rem;
+  width: 100%;
 }
 .home-card1 {
-  max-width: 35rem;
+  max-width: 50%;
 }
 .home-card1 h1 {
   font-size: 3rem;
@@ -77,8 +81,7 @@ header .navlinks {
 }
 .home-btn {
   margin-top: 8%;
-  width: 25rem;
-  height: 3rem;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   background: transparent;
@@ -86,7 +89,7 @@ header .navlinks {
 }
 .home-btn a {
   position: relative;
-  background: linear-gradient(120deg, #30bced, #fc5130, #303036);
+  background: linear-gradient(120deg, #e6fbff, #198cff, #001580);
   padding: 1rem 1.5rem;
   border-radius: 1.2rem;
   font-size: 1.2rem;
@@ -111,7 +114,7 @@ header .navlinks {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, #30bced, #fc5130, #303036);
+  background: linear-gradient(120deg, #30bced, blue, #303036);
   border-radius: 1rem;
   transition: 0.5s ease;
   opacity: 0;
@@ -121,22 +124,28 @@ header .navlinks {
   opacity: 1;
 }
 
-.home-img {
-  width: 100%;
-  height: 90vh;
+.home-card2 {
+  width: 60%;
+  height: 80%;
   overflow: hidden;
-  border-radius: 0 0 50rem 50rem;
+  border-radius: 0;
   transition: transform 0.8s;
   cursor: pointer;
+  background-image: cover;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
 }
-.home-img:hover {
+.home-card2:hover {
   transform: scale(0.97);
 }
 
 /* -------------------------About Page------------------------ */
 .about {
   padding: 8rem;
-  color: #ababab;
+}
+.about h1 {
+  color: #fc5130;
 }
 
 .row {
@@ -150,8 +159,9 @@ header .navlinks {
 .about-col-1 img {
   width: 100%;
   border-radius: 30%;
-  box-shadow: 0 0 50px 2px #30bced;
+  box-shadow: 0 0 50px 2px #fc5130;
 }
+/* #30bced */
 
 .about-col-2 {
   width: 60%;
@@ -159,15 +169,16 @@ header .navlinks {
 .about-title {
   font-size: 3rem;
   font-weight: 600;
-  color: ;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .tab-titles {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0 40px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .tab-links {
-  margin-right: 5rem;
   font-size: 1.5rem;
   font-weight: 500;
   position: relative;
@@ -186,4 +197,86 @@ header .navlinks {
 }
 .active-link.tab-links::after {
   width: 50%;
+}
+
+.tab-links ul li {
+  margin: 10px 5px;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  position: relative;
+}
+.tab-links h1 {
+  margin-top: 1rem;
+  text-align: center;
+  color: #fc5130;
+  box-shadow: 0 0 10px 2px white;
+}
+.tab-links ul li::before {
+  background: #fc5130;
+  content: "";
+  height: 5px;
+  width: 10rem;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+/* ------------------socials---------- */
+.skillset h1 {
+  text-align: center;
+  font-size: 4rem;
+  position: relative;
+}
+.skillset h1::after {
+  content: "";
+  background: white;
+  height: 5px;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  box-shadow: 0 10px 20px 2px blue;
+}
+.skills {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+
+.skill-icon i {
+  font-size: 10rem;
+}
+.skill-icon {
+  font-size: 1.9rem;
+  text-align: center;
+}
+.icon1 i {
+  color: #fc5130;
+}
+.icon2 i {
+  color: #198cff;
+}
+.icon3 i {
+  color: yellow;
+}
+.icon4 i {
+  color: skyblue;
+}
+
+/* ---------------------socials------------- */
+
+.socials {
+  padding: 3rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  font-size: 4rem;
+  gap: 4rem;
+}
+.socials i {
+  border-radius: 100%;
+  background: skyblue;
 }

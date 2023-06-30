@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,21 +18,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <title>Bibek Portfolio</title>
   </head>
   <body>
+    <input type="checkbox" id="mode" />
     <!-- header -->
     <header>
+      <!-- mode -->
+      <label for="mode"
+        ><i
+          class="fa-solid fa-circle-half-stroke toggle"
+          style="color: #27282a"
+        ></i
+      ></label>
+      <!-- navbar -->
       <a href="#" class="logo"><span>B</span>I<span>B</span>EK.</a>
+      <input type="checkbox" id="check" class="check" />
+      <label for="check" id="checkbtn">
+        <i class="fa-solid fa-bars" style="color: #3e77da"></i>
+      </label>
       <ul class="navlinks">
-        <li><a href="home" class="active">HOME</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="Services">Services</a></li>
-        <li><a href="Contact">Contact Me</a></li>
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#about-page">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#social-page">Socials</a></li>
       </ul>
     </header>
     <!-- hero -->
-    <section class="home">
+    <section class="home" id="home">
       <div class="home-card1">
         <h1>Hi, I am Bibek Shrestha</h1>
         <h2>Frontend Developer</h2>
@@ -49,7 +64,7 @@
       </div>
     </section>
     <!------------------------- About page--------------- -->
-    <section class="about">
+    <section class="about" id="about-page">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
@@ -90,7 +105,7 @@
     </section>
 
     <!-- ----------------------socialmedia----------- -->
-    <section class="skillset">
+    <section class="skillset" id="skills">
       <h1>Skills</h1>
       <div class="skills">
         <div class="skill-icon icon1">
@@ -113,10 +128,17 @@
     </section>
 
     <!-- ----------------socials---------------- -->
-    <section class="socials">
+    <section class="socials" id="social-page">
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-linkedin"></i>
       <i class="fa-brands fa-github"></i>
     </section>
+
+    <script>
+      let mode = document.getElementById("mode");
+      mode.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+    </script>
   </body>
 </html>

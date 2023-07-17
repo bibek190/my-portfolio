@@ -393,11 +393,9 @@ header .navlinks {
     align-items: center;
     justify-content: center;
     transition: 0.3s ease;
+    margin-left: -100px;
   }
-  #checkbtn:hover {
-    transform: rotate(90deg);
-    padding: 10px;
-  }
+
   header #check:checked ~ .navlinks {
     left: 50%;
   }
